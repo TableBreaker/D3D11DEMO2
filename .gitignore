@@ -31,3 +31,5 @@
 *.out
 *.app
 D3D11DEMO2/.vs/
+D3D11DEMO2/D3D11DEMO2/Debug/
+D3D11DEMO2/Debug/

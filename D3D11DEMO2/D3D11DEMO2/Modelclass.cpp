@@ -22,5 +22,5 @@ bool ModelClass::Initialize(ID3D11Device* device)
 	bool result;
 
 	// Initialize the vertex and index buffer that hold the geometry for the model
-	result = 
+	return false;
 }
