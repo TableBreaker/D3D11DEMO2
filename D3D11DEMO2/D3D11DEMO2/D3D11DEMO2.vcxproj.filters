@@ -39,6 +39,9 @@
     <ClCompile Include="D3dclass.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Colorshaderclass.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Color.ps" />
@@ -58,6 +61,9 @@
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="D3dclass.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Colorshaderclass.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>

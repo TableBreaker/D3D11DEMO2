@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Colorshaderclass.cpp" />
     <ClCompile Include="D3dclass.cpp" />
     <ClCompile Include="Graphicsclass.cpp" />
     <ClCompile Include="Inputclass.cpp" />
@@ -127,6 +128,7 @@
     <None Include="..\Color.vs" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Colorshaderclass.h" />
     <ClInclude Include="D3dclass.h" />
     <ClInclude Include="Graphicsclass.h" />
     <ClInclude Include="Inputclass.h" />
