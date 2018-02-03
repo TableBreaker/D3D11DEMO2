@@ -42,6 +42,9 @@
     <ClCompile Include="Colorshaderclass.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Cameraclass.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Color.ps" />
@@ -64,6 +67,9 @@
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Colorshaderclass.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Cameraclass.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>

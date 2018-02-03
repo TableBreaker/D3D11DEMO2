@@ -412,7 +412,7 @@ void D3DClass::BeginScene(float red, float green, float blue, float alpha)
 	color[0] = red;
 	color[1] = green;
 	color[2] = blue;
-	color[4] = alpha;
+	color[3] = alpha;
 
 	// Clear the back buffer.
 	m_deviceContext->ClearRenderTargetView(m_renderTargetView, color);
@@ -473,4 +473,4 @@ void D3DClass::GetVideoCardInfo(char* cardName, int& memory)
 	strcpy_s(cardName, 128, m_videoCardDescription);
 	memory = m_videoCardMemory;
 	return;
-}
+} 

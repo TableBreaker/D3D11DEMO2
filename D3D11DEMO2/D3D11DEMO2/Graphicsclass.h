@@ -3,10 +3,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//////////////
-// INCLUDES //
-//////////////
-#include <windows.h>
+///////////////////////
+// MY CLASS INCLUDES //
+///////////////////////
+#include "D3dclass.h"
+#include "Cameraclass.h"
+#include "Modelclass.h"
+#include "Colorshaderclass.h"
 
 /////////////
 // GLOBALS //
@@ -32,4 +35,10 @@ public:
 
 private:
 	bool Render();
+
+private:
+	D3DClass* m_Direct3D;
+	CameraClass* m_Camera;
+	ModelClass* m_Model;
+	ColorShaderClass* m_ColorShader;
 };
