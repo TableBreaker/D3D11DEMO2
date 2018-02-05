@@ -47,10 +47,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Color.ps" />
-    <None Include="..\Color.vs" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Inputclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,5 +68,9 @@
     <ClInclude Include="Cameraclass.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Color.ps" />
+    <None Include="Color.vs" />
   </ItemGroup>
 </Project>

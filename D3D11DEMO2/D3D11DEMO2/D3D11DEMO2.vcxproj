@@ -125,10 +125,6 @@
     <ClCompile Include="Systemclass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Color.ps" />
-    <None Include="..\Color.vs" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Cameraclass.h" />
     <ClInclude Include="Colorshaderclass.h" />
     <ClInclude Include="D3dclass.h" />
@@ -136,6 +132,10 @@
     <ClInclude Include="Inputclass.h" />
     <ClInclude Include="Modelclass.h" />
     <ClInclude Include="Systemclass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Color.ps" />
+    <None Include="Color.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
