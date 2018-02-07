@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK-dec2017\Inc;$(SolutionDir)\D3D11DEMO2\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -84,6 +85,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK-dec2017\Inc;$(SolutionDir)\D3D11DEMO2\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -94,6 +96,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK-dec2017\Inc;$(SolutionDir)\D3D11DEMO2\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -108,6 +111,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK-dec2017\Inc;$(SolutionDir)\D3D11DEMO2\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -115,29 +119,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cameraclass.cpp" />
-    <ClCompile Include="Colorshaderclass.cpp" />
-    <ClCompile Include="D3dclass.cpp" />
-    <ClCompile Include="Graphicsclass.cpp" />
-    <ClCompile Include="Inputclass.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Modelclass.cpp" />
-    <ClCompile Include="Systemclass.cpp" />
+    <None Include="Shader\Color.ps" />
+    <None Include="Shader\Color.vs" />
+    <None Include="Shader\Texture.ps" />
+    <None Include="Shader\Texture.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cameraclass.h" />
-    <ClInclude Include="Colorshaderclass.h" />
-    <ClInclude Include="D3dclass.h" />
-    <ClInclude Include="Graphicsclass.h" />
-    <ClInclude Include="Inputclass.h" />
-    <ClInclude Include="Modelclass.h" />
-    <ClInclude Include="Systemclass.h" />
+    <ClInclude Include="Header\Cameraclass.h" />
+    <ClInclude Include="Header\Colorshaderclass.h" />
+    <ClInclude Include="Header\D3dclass.h" />
+    <ClInclude Include="Header\Graphicsclass.h" />
+    <ClInclude Include="Header\Inputclass.h" />
+    <ClInclude Include="Header\Modelclass.h" />
+    <ClInclude Include="Header\Mydefines.h" />
+    <ClInclude Include="Header\Systemclass.h" />
+    <ClInclude Include="Header\Textureclass.h" />
+    <ClInclude Include="Header\Textureshaderclass.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Color.ps" />
-    <None Include="Color.vs" />
+    <ClCompile Include="Source\Cameraclass.cpp" />
+    <ClCompile Include="Source\Colorshaderclass.cpp" />
+    <ClCompile Include="Source\D3dclass.cpp" />
+    <ClCompile Include="Source\Graphicsclass.cpp" />
+    <ClCompile Include="Source\Inputclass.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Modelclass.cpp" />
+    <ClCompile Include="Source\Systemclass.cpp" />
+    <ClCompile Include="Source\Textureclass.cpp" />
+    <ClCompile Include="Source\Textureshaderclass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DirectXTK-dec2017\DirectXTK_Desktop_2017_Win10.vcxproj">
+      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\Texture\seafloor.DDS" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
