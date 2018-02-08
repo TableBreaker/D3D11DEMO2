@@ -9,9 +9,8 @@
 // INCLUDES //
 //////////////
 #include <d3d11.h>
-// #include <d3dx11tex.h>
-// The D3DX (D3DX 9, D3DX 10, and D3DX 11) utility library is deprecated for Windows 8 and is not supported for Windows Store apps.
 #include <DDSTextureLoader.h>
+#include <stdio.h>
 using namespace DirectX;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -19,16 +18,31 @@ using namespace DirectX;
 ////////////////////////////////////////////////////////////////////////////////
 class TextureClass
 {
+private:
+	struct TargaHeader
+	{
+		unsigned char data1[12];
+		unsigned short width;
+		unsigned short height;
+		unsigned char bpp;
+		unsigned char data2;
+	};
+
 public:
 	TextureClass();
 	TextureClass(const TextureClass&);
 	~TextureClass();
 
-	bool Initialize(ID3D11Device*, const WCHAR*);
+	bool Initialize(ID3D11Device*, ID3D11DeviceContext*, char*);
 	void Shutdown();
 
 	ID3D11ShaderResourceView* GetTexture();
 
 private:
-	ID3D11ShaderResourceView* m_texture;
+	bool LoadTarga(char*, int&, int&);
+
+private:
+	unsigned char* m_targaData;
+	ID3D11Texture2D* m_texture;
+	ID3D11ShaderResourceView* m_textureView;
 };

@@ -62,7 +62,8 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 
 #ifdef TEXTURE_SHADER
 	// Initialize the model object.
-	result = m_Model->Initialize(m_Direct3D->GetDevice(), L"Resource/Texture/seafloor.dds");
+	char filename[] = "Resource/Texture/tex4.tga";
+	result = m_Model->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), filename);
 	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize the model object.", L"Error", MB_OK);

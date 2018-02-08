@@ -44,7 +44,7 @@ public:
 	~ModelClass();
 
 #ifdef TEXTURE_SHADER
-	bool Initialize(ID3D11Device*, const WCHAR*);
+	bool Initialize(ID3D11Device*, ID3D11DeviceContext*, char*);
 #else
 	bool Initialize(ID3D11Device*);
 #endif
@@ -64,7 +64,7 @@ private:
 	void RenderBuffers(ID3D11DeviceContext*);
 
 #ifdef TEXTURE_SHADER
-	bool LoadTexture(ID3D11Device*, const WCHAR*);
+	bool LoadTexture(ID3D11Device*, ID3D11DeviceContext*, char*);
 	void ReleaseTexture();
 #endif
 
