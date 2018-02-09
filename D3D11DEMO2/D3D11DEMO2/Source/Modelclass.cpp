@@ -95,7 +95,7 @@ bool ModelClass::InitializeBuffers(ID3D11Device* device)
 	m_vertexCount = 4;
 	
 	// Set the number of indices in the index array.
-	m_indexCount = 6;
+	m_indexCount = 4;
 
 	// Create the vertex array.
 	vertices = new VertexType[m_vertexCount];
@@ -128,13 +128,13 @@ bool ModelClass::InitializeBuffers(ID3D11Device* device)
 	vertices[2].color = XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f);
 #endif
 
-	// Load the index array with data.
+	// Load the index array with data.  using triangle strip topology
 	indices[0] = 0;
 	indices[1] = 1;
-	indices[2] = 2;
-	indices[3] = 0;
-	indices[4] = 2;
-	indices[5] = 3;
+	indices[2] = 3;
+	indices[3] = 2;
+// 	indices[4] = 2; // if using triangle list we must have 6 indices
+// 	indices[5] = 3;
 
 	// Set up the description of the static vertex buffer.
 	vertexBufferDesc.Usage = D3D11_USAGE_DEFAULT;
@@ -222,7 +222,7 @@ void ModelClass::RenderBuffers(ID3D11DeviceContext* deviceContext)
 	deviceContext->IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R32_UINT, 0);
 
 	// Set the type of primitive that should be rendered from this vertex buffer.
-	deviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	deviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 
 	return;
 }
