@@ -149,11 +149,6 @@
     <ClCompile Include="Source\Textureshaderclass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DirectXTK-dec2017\DirectXTK_Desktop_2017_Win10.vcxproj">
-      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="Resource\Texture\seafloor.DDS" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
